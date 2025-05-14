@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Capsule
   ItemDescription: Not a pill
-  ItemSprite: {fileID: 21300000, guid: 42c01e22cc35c2547a6a67e4d7b626ef, type: 3}
+  ItemSprite: {fileID: 21300000, guid: d3eb09e737dffb64580cdf421a513289, type: 3}

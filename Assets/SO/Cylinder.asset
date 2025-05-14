@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Cylinder
   ItemDescription: It's not really round
-  ItemSprite: {fileID: 21300000, guid: 51b836e589847ef4ba0d6b2670cd53da, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 012e6d337bf263c4a961cfe31ca70cf7, type: 3}

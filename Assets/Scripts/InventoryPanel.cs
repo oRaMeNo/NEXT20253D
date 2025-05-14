@@ -9,6 +9,7 @@ public class InventoryPanel : MonoBehaviour
     public TextMeshProUGUI DescriptionText;
     public Transform rightPanelTransform;
     public GameObject itemButtonPrefab;
+    public TextMeshProUGUI ItemName;
 
     public void OnOpen()
     {
@@ -29,6 +30,7 @@ public class InventoryPanel : MonoBehaviour
             {
                 SelectedIcon.sprite = itemButtonComp.data.ItemSprite;
                 DescriptionText.text = itemButtonComp.data.ItemDescription;
+                ItemName.text = itemButtonComp.data.ItemName;
 
             });
 

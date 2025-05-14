@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Random.Range(0,TargetList.Count);
+        AssignRandomItem();
+
+
     }
 
     public InventoryPanel inventoryPanel;
@@ -48,19 +50,23 @@ public class GameManager : MonoBehaviour
     public ItemData targetItem;
     public Image targetItemImage;
     public int targetAmount;
+    public int score;
 
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI targetAmountText;
-    public List<ScriptableObject> TargetList = new List<ScriptableObject>();
+    public List<ItemData> TargetList = new List<ItemData>();
 
     private void Update()
     {
+        if (targetItem != null && targetItemImage != null)
+        { targetItemImage.sprite = targetItem.ItemSprite; }
+        
         if (timeCounter > 0)
         {
             timeCounter -= Time.deltaTime;
             timerText.text = timeCounter.ToString();
-            targetAmountText.text = (targetAmount - InventoryManager.instance.GetItemAmount(targetItem)).ToString();
-                if (InventoryManager.instance.GetItemAmount(targetItem) >= targetAmount)
+            targetAmountText.text = (targetAmount - score).ToString();
+                if (score >= targetAmount)
                 {
                 Debug.Log("You Win");
                 Cursor.visible = true;
@@ -74,6 +80,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("You Lose");
             SceneManager.LoadScene(0);
         }
+    }
+
+    public void AssignRandomItem()
+    {
+        if (targetItem != null && targetItemImage != null)
+        { targetItemImage.sprite = targetItem.ItemSprite; }
+        int randomIndex  = Random.Range(0, TargetList.Count);
+        targetItem = TargetList[randomIndex];
     }
 
 }

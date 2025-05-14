@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3789f4ebc98685f45aa71287a6d8827c, type: 3}
-  m_Name: Sphere
+  m_Name: Capsule
   m_EditorClassIdentifier: 
-  ItemName: Sphere
-  ItemDescription: It has no edge, trustworthy
-  ItemSprite: {fileID: 21300000, guid: 26a9a404cbd2183478e2fcf580520653, type: 3}
+  ItemName: Capsule
+  ItemDescription: Not a pill
+  ItemSprite: {fileID: 21300000, guid: 42c01e22cc35c2547a6a67e4d7b626ef, type: 3}
